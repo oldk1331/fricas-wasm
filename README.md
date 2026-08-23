@@ -27,9 +27,6 @@
 - build_startup_manifest.js: This node script is used to create `startup_manifest.json`. Place and execute it in web root and visit localhost:9999 to capture and overwrite the `startup_manifest.json` file.
 - deprecated/fricas-fs-lazyloading.js: This script lazyloades all files.
 
-# Issue:
-- On Chrome, When devtools is toggled, any computation will fail.
-
 # Credit
 - https://github.com/oldk1331/fricas0
 - https://gitlab.com/embeddable-common-lisp/ecl

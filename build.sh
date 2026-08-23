@@ -37,7 +37,8 @@ BUILD_ARCH=$(cc -dumpmachine || echo "x86_64-pc-linux-gnu")
 
 export CFLAGS="-O2"
 export CXXFLAGS="-O2"
-export LDFLAGS="-lidbfs.js -O2 -s TOTAL_STACK=67108864 -s INITIAL_HEAP=1073741824 -s ALLOW_MEMORY_GROWTH=1 -s MAXIMUM_MEMORY=4294967296"
+export LDFLAGS="-lidbfs.js -O2 -s INITIAL_HEAP=1073741824 -s ALLOW_MEMORY_GROWTH=1 -s MAXIMUM_MEMORY=4294967296"
+sed -i 's/sSTACK_SIZE=1048576/sSTACK_SIZE=4194304/' "${ECL_SRC}"/src/configure
 emconfigure ./configure \
   --host=wasm32-unknown-emscripten \
   --build="$BUILD_ARCH" \
